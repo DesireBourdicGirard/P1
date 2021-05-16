@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <title>Affichage de tous les albums</title>
 </head>
-<body>
+<h1>Bienvenue sur le blog des chansons de rock</h1>
 
+{%for album in albums%}
 
-
-
+        <a href="{% url 'lire_album' album.id %}">
+            <p>{{album.title}}</p>
+        </a>
+<br/>
+{%empty%}
+        <p>Aucun article.</p>
+{%endfor%}
 </body>
 </html>

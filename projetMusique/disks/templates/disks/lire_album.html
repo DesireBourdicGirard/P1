@@ -9,13 +9,16 @@
 <h1>Détails de l'album {{album}} </h1>
 
 {%for track in tracks%}
-        <p>Nom du titre : {{track.name}} <br/>Nom de l'artiste : {{track.composer}} : <br/>Prix unitaire : {{track.unitPrice}}$ <br/>Durée = {{track.milliseconds}}ms</p>
+        <p>Nom du titre : {{track.name}} <br/>Nom de l'artiste : {{track.composer}} <br/>Prix unitaire : {{track.unitPrice}}$ <br/>Durée = {{track.milliseconds}}ms</p>
     <br/>
 
 {%empty%}
     <p>Aucun titre dans l'album.</p>
 {%endfor%}
 
+<a href="{% url 'accueil' %}">
+            <p>Retour à la page d'accueil</p>
+</a>
 
 </body>
 </html>
